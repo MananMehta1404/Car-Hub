@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { Dialog, Transition } from '@headlessui/react';
 
 import { CarProps } from '@/types';
+import { generateCarImageUrl } from '@/utils';
 
 interface CarDetailsProps {
   isOpen: boolean;
@@ -57,7 +58,7 @@ const CarDetails = ({ isOpen, closeModal, car }: CarDetailsProps) => {
                   </button>
 
                   <div className='flex-1 flex flex-col gap-3'>
-                    <div className='relative w-full h-40 bg-pattern bg-cover bg-center'>
+                    <div className='relative w-full h-40 bg-pattern bg-cover bg-center rounded-2xl'>
                       <Image src="/hero.png" alt="car model" fill priority className="object-contain" />
                     </div>
                     <div className='flex gap-3'>
