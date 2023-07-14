@@ -61,11 +61,11 @@ const SearchBar = () => {
     <form className='searchbar' onSubmit={handleSearch}>
       <div className="searchbar__item">
         <SearchManufacturer 
-          manufacturer= {manufacturer} setManufacturer={setManufacturer} 
+          manufacturer={manufacturer} setManufacturer={setManufacturer} 
         />
         <SearchButton otherClasses="sm:hidden" />
       </div>
-      <div className="searchbar__item">
+      <div className="searchbar__item ml-3">
         <Image 
           src="/model-icon.png"
           alt="car model"
