@@ -45,8 +45,6 @@ export default function Home() {
     getCars();
   }, [manufacturer, model, fuel, year, limit]);
 
-  const isDataEmpty = !Array.isArray(allCars) || allCars.length < 1 || !allCars;
-
   return (
     <main className="overflow-hidden">
       <Hero />
@@ -63,8 +61,8 @@ export default function Home() {
           <SearchBar setManufacturer={setManufacturer} setModel={setModel} />
 
           <div className='home__filter-container'>
-            <CustomFilter title='fuel' options={fuels} setFilter={setFuel} />
-            <CustomFilter title='year' options={yearsOfProduction} setFilter={setYear} />
+            <CustomFilter title='fuel' options={fuels} setFilter1={setFuel} />
+            <CustomFilter title='year' options={yearsOfProduction} setFilter2={setYear} />
           </div>
         </div>
         
@@ -99,7 +97,6 @@ export default function Home() {
             <h2 className='text-black text-xl font-bold'>
               Oops, no results
             </h2>
-            <p>{allCars?.message}</p>
           </div>
         )}
 
